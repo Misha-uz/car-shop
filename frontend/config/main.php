@@ -36,14 +36,18 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
+            'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            ],
+                'catalog' => 'car/index',
+                'catalog/<brand>' => 'car/index',
+                'catalog/<brand>/<model>' => 'car/index',
+            ]
         ],
-        */
+
     ],
     'params' => $params,
 ];
